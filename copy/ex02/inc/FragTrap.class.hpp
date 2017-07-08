@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/03 16:02:35 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/07 23:05:38 by irhett           ###   ########.fr       */
+/*   Created: 2017/07/07 21:25:13 by irhett            #+#    #+#             */
+/*   Updated: 2017/07/07 23:44:24 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef FRAGTRAP_CLASS_HPP
+# define FRAGTRAP_CLASS_HPP
 
-#include "FragTrap.class.hpp"
+# include <iostream>
+# include <string>
 
-int		main(void)
-{
-	FragTrap	foo("Frank");
+class FragTrap : public ClapTrap {
 
-	foo.rangedAttack("Bar");
-	foo.takeDamage(10);
-	foo.meleeAttack("Bar");
-	foo.takeDamage(10);
-	foo.beRepaired(15);
-	foo.vaultHunterDotExe("Bar");
-	return (0);
-}
+public:
+
+	FragTrap(std::string name);
+	FragTrap(FragTrap const & old);
+	~FragTrap(void);
+	
+	FragTrap &		operator=(FragTrap const &old);
+
+	int				vaultHunterDotExe(std::string const &target);
+
+private:
+
+	FragTrap(void);
+};
+
+#endif

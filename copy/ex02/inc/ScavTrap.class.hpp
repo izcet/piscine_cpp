@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.class.hpp                                    :+:      :+:    :+:   */
+/*   ScavTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/04 13:48:44 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/06 21:44:32 by irhett           ###   ########.fr       */
+/*   Created: 2017/07/07 21:25:13 by irhett            #+#    #+#             */
+/*   Updated: 2017/07/07 23:43:33 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_CLASS_HPP
-# define HUMAN_CLASS_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-#include <string>
-#include "Brain.class.hpp"
+# include <iostream>
+# include <string>
 
-class Human {
+class ScavTrap : public ClapTrap{
 
 public:
 
-	Human(void);
-	~Human(void);
-	std::string		identify(void) const;
-	const Brain		&getBrain(void) const;
+	ScavTrap(std::string name);
+	ScavTrap(ScavTrap const & old);
+	~ScavTrap(void);
+	
+	ScavTrap &		operator=(ScavTrap const &old);
+
+	std::string		challengeNewcomer(std::string const &target);
 
 private:
 
-	const Brain		_b;
-
+	ScavTrap(void);
 };
 
 #endif

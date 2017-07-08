@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.class.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/04 14:04:36 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/06 21:44:29 by irhett           ###   ########.fr       */
+/*   Created: 2017/07/03 16:02:35 by irhett            #+#    #+#             */
+/*   Updated: 2017/07/07 23:35:54 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-#include "Human.class.hpp"
+#include "ScavTrap.class.hpp"
 
-Human::Human(void) {
-	return;
-}
-
-Human::~Human(void) {
-	return;
-}
-
-std::string		Human::identify(void) const
+int		main(void)
 {
-	return (this->_b.identify());
-}
+	ScavTrap	ska("Frank");
 
-const Brain	&Human::getBrain(void) const
-{
-	return (this->_b);
+	ska.rangedAttack("Bar");
+	ska.takeDamage(10);
+	ska.meleeAttack("Bar");
+	ska.takeDamage(10);
+	ska.beRepaired(15);
+	ska.challengeNewcomer("Bar");
+	return (0);
 }

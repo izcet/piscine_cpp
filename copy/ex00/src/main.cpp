@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.class.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/04 13:48:44 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/06 21:20:35 by irhett           ###   ########.fr       */
+/*   Created: 2017/07/03 16:02:35 by irhett            #+#    #+#             */
+/*   Updated: 2017/07/07 23:05:38 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_CLASS_HPP
-# define BRAIN_CLASS_HPP
-
+#include <iostream>
 #include <string>
 
-class Brain {
+#include "FragTrap.class.hpp"
 
-public:
+int		main(void)
+{
+	FragTrap	foo("Frank");
 
-	Brain(void);
-	~Brain(void);
-	std::string		identify(void) const;
-
-private:
-	int				_num_ideas;
-
-};
-
-#endif
+	foo.rangedAttack("Bar");
+	foo.takeDamage(10);
+	foo.meleeAttack("Bar");
+	foo.takeDamage(10);
+	foo.beRepaired(15);
+	foo.vaultHunterDotExe("Bar");
+	return (0);
+}

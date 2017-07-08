@@ -65,7 +65,7 @@ rm .vimcommand$NAME
 
 echo "#ifndef $(echo $NAME | awk '{print toupper($0)}')_CLASS_HPP" >> $HEADR
 echo "# define $(echo $NAME | awk '{print toupper($0)}')_CLASS_HPP" >> $HEADR
-echo "\n# include <iostream>\n" >> $HEADR
+echo "\n# include <iostream>\n# include <string>" >> $HEADR
 echo "class $NAME {\n" >> $HEADR
 echo "public:\n" >> $HEADR
 echo "\t$NAME(void);" >> $HEADR
@@ -73,7 +73,7 @@ echo "\t$NAME(/* args */);" >> $HEADR
 echo "\t$NAME($NAME const & old);" >> $HEADR
 echo "\t$NAME(void);" >> $HEADR
 echo "\t~$NAME(void); // to be updated" >> $HEADR
-echo "\n\t$NAME\t\t\t\t&operator=($NAME const & old);" >> $HEADR
+echo "\n\t$NAME\t\t\t&operator=($NAME const &old);" >> $HEADR
 echo "\tstd::ostream\t&operator<<(std::ostream &o, $NAME const &c);" >> $HEADR
 echo "\n\tvoid\t\t\tsampleFunction(void) const;" >> $HEADR
 echo "\nprivate:\n" >> $HEADR
