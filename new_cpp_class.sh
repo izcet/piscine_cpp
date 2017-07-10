@@ -74,11 +74,12 @@ echo "\t$NAME($NAME const & old);" >> $HEADR
 echo "\t$NAME(void);" >> $HEADR
 echo "\t~$NAME(void); // to be updated" >> $HEADR
 echo "\n\t$NAME\t\t\t&operator=($NAME const &old);" >> $HEADR
-echo "\tstd::ostream\t&operator<<(std::ostream &o, $NAME const &c);" >> $HEADR
 echo "\n\tvoid\t\t\tsampleFunction(void) const;" >> $HEADR
 echo "\nprivate:\n" >> $HEADR
 echo "\tint\t\t_privateFoo;" >> $HEADR
-echo "\n};\n\n#endif" >> $HEADR
+echo "\n};\n" >> $HEADR
+echo "std::ostream\t&operator<<(std::ostream &o, $NAME const &c);" >> $HEADR
+echo "\n#endif" >> $HEADR
 
 echo "#include <iostream>\n#include <string>" >> $CLASS
 echo "#include \"$NAME.class.hpp\"\n" >> $CLASS
