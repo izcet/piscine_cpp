@@ -6,7 +6,7 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 21:25:13 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/07 23:43:33 by irhett           ###   ########.fr       */
+/*   Updated: 2017/07/13 16:50:09 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "ClapTrap.class.hpp"
 
 class ScavTrap : public ClapTrap{
 

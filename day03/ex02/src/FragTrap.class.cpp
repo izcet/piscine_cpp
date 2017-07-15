@@ -6,13 +6,14 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 21:25:13 by irhett            #+#    #+#             */
-/*   Updated: 2017/07/07 23:45:11 by irhett           ###   ########.fr       */
+/*   Updated: 2017/07/13 16:50:50 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include "FragTrap.class.hpp"
+#include "ClapTrap.class.hpp"
 
 FragTrap::FragTrap(void) :
 	_name("FUBAR"),
